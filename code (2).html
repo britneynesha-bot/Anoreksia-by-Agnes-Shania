@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIANES - Edukasi Anoreksia</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #fce4ec 0%, #e1f5fe 100%), url('https://via.placeholder.com/1920x1080/ffffff/cccccc?text=Cloudy+Sky') no-repeat center center fixed; /* Gradient pink-biru pastel + background awan */
+            background-size: cover; /* Agar awan menutupi seluruh layar */
+            background-blend-mode: overlay; /* Blend untuk efek awan lembut */
+            color: #37474f;
+            line-height: 1.6;
+        }
+        header {
+            background: rgba(248, 187, 217, 0.9); /* Pink pastel dengan transparansi untuk efek awan */
+            color: #0277bd; /* Biru pastel */
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: fadeIn 2s;
+        }
+        nav {
+            background: rgba(179, 229, 252, 0.9); /* Biru pastel dengan transparansi */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #37474f;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #f06292; /* Pink hover */
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255,255,255,0.95); /* Putih transparan untuk kontras dengan awan */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #0277bd;
+            border-bottom: 2px solid #f8bbd9;
+            padding-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        li::before {
+            content: "🌸"; /* Bunga untuk list */
+            position: absolute;
+            left: 0;
+        }
+        .bmi-calculator {
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #b3e5fc;
+            border-radius: 5px;
+            width: 200px;
+        }
+        button {
+            background: #f8bbd9;
+            color: #0277bd;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #f06292;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #0277bd;
+        }
+        footer {
+            background: rgba(248, 187, 217, 0.9); /* Pink pastel dengan transparansi */
+            color: #0277bd;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://via.placeholder.com/800x200/ffebee?text=Inspirational+Background') no-repeat center center;
+            background-size: cover;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        .quote {
+            font-size: 1.5em;
+            font-style: italic;
+            margin: 20px 0;
+            animation: slideIn 3s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .icon {
+            font-size: 2em;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SIANES</h1>
+        <p>Edukasi Interaktif tentang Anoreksia Nervosa</p>
+    </header>
+    <nav>
+        <a href="#pengertian">Pengertian</a>
+        <a href="#penyebab">Penyebab</a>
+        <a href="#gejala">Gejala</a>
+        <a href="#pencegahan">Pencegahan</a>
+        <a href="#penanganan">Penanganan</a>
+        <a href="#bmi">Kalkulator BMI</a>
+    </nav>
+
+    <section id="pengertian">
+        <h2><span class="icon">💖🌸</span>Pengertian Anoreksia Nervosa</h2>
+        <p>Anoreksia nervosa adalah gangguan makan serius yang ditandai oleh ketakutan berlebihan terhadap kenaikan berat badan, pembatasan asupan makanan yang ekstrem, dan citra tubuh yang terganggu. Orang dengan anoreksia sering melihat diri mereka sebagai "terlalu gemuk" meskipun mereka mungkin kurus secara berlebihan. Ini dapat menyebabkan masalah kesehatan serius seperti malnutrisi, osteoporosis, dan bahkan kematian jika tidak ditangani.</p>
+        <p>Menurut WHO, anoreksia mempengaruhi sekitar 1-2% populasi, lebih sering pada wanita muda, dan dapat dimulai pada usia remaja.</p>
+    </section>
+
+    <section id="penyebab">
+        <h2><span class="icon">❤️🌺</span>Penyebab Anoreksia</h2>
+        <p>Penyebab anoreksia tidak sepenuhnya diketahui, tetapi melibatkan kombinasi faktor biologis, psikologis, dan sosial:</p>
+        <ul>
+            <li><strong>Genetik:</strong> Riwayat keluarga dengan gangguan makan meningkatkan risiko.</li>
+            <li><strong>Psikologis:</strong> Tekanan untuk sempurna, rendahnya harga diri, atau trauma masa lalu.</li>
+            <li><strong>Sosial:</strong> Paparan media yang idealisasi tubuh kurus, bullying, atau tekanan peer.</li>
+            <li><strong>Biologis:</strong> Ketidakseimbangan hormon atau masalah otak terkait regulasi nafsu makan.</li>
+        </ul>
+    </section>
+
+    <section id="gejala">
+        <h2><span class="icon">💕🌹</span>Gejala Anoreksia</h2>
+        <p>Gejala dapat fisik, perilaku, dan emosional. Jika Anda atau seseorang yang Anda kenal mengalami ini, konsultasikan dengan profesional kesehatan.</p>
+        <ul>
+            <li><strong>Fisik:</strong> Penurunan berat badan drastis, kelelahan, rambut rontok, kulit kering, siklus menstruasi tidak teratur.</li>
+            <li><strong>Perilaku:</strong> Pembatasan makanan, olahraga berlebihan, menghindari makan bersama, obsesi dengan berat badan.</li>
+            <li><strong>Emosional:</strong> Ketakutan berlebihan terhadap kenaikan berat badan, citra tubuh negatif, depresi, atau kecemasan.</li>
+        </ul>
+    </section>
+
+    <section id="pencegahan">
+        <h2><span class="icon">💗🌻</span>Pencegahan Anoreksia</h2>
+        <p>Pencegahan melibatkan pendidikan dan dukungan dini:</p>
+        <ul>
+            <li>Promosikan citra tubuh positif melalui media dan pendidikan sekolah.</li>
+            <li>Dorong pola makan sehat dan olahraga moderat, bukan ekstrem.</li>
+            <li>Bangun harga diri melalui dukungan keluarga dan teman.</li>
+            <li>Edukasi tentang risiko gangguan makan sejak dini.</li>
+        </ul>
+    </section>
+
+    <section id="penanganan">
+        <h2><span class="icon">😍🌷</span>Penanganan Anoreksia</h2>
+        <p>Penanganan memerlukan tim multidisiplin:</p>
+        <ul>
+            <li><strong>Terapi Nutrisi:</strong> Rencana makan yang dipantau oleh ahli gizi.</li>
+            <li><strong>Terapi Psikologis:</strong> CBT (Cognitive Behavioral Therapy) atau terapi keluarga.</li>
+            <li><strong>Perawatan Medis:</strong> Pengobatan untuk komplikasi seperti suplemen nutrisi atau obat untuk depresi.</li>
+            <li><strong>Dukungan Sosial:</strong> Kelompok dukungan dan bantuan dari keluarga.</li>
+        </ul>
+        <p>Jika Anda membutuhkan bantuan, hubungi hotline seperti di Indonesia: Kemenkes RI atau organisasi seperti Yayasan Anoreksia Indonesia.</p>
+    </section>
+
+    <section id="bmi" class="bmi-calculator">
+        <h2><span class="icon">💖🌸</span>Kalkulator BMI</h2>
+        <p>Masukkan tinggi (cm) dan berat (kg) untuk menghitung BMI Anda. BMI membantu menilai apakah berat badan ideal, tetapi bukan satu-satunya indikator kesehatan.</p>
+        <input type="number" id="height" placeholder="Tinggi (cm)">
+        <input type="number" id="weight" placeholder="Berat (kg)">
+        <button onclick="calculateBMI()">Hitung BMI</button>
+        <div id="result"></div>
+    </section>
+
+    <footer>
+        <div class="quote">
+            “Self-love hits different when you finally realize you're the main character 💅🌸💖.” - Nesha
+        </div>
+        <p>&copy; 2023 SIANES. Dibuat untuk edukasi. Konsultasikan profesional kesehatan untuk saran pribadi.</p>
+    </footer>
+
+    <script>
+        function calculateBMI() {
+            const height = document.getElementById('height').value / 100; // Convert to meters
+            const weight = document.getElementById('weight').value;
+            if (height > 0 && weight > 0) {
+                const bmi = (weight / (height * height)).toFixed(2);
+                let category = '';
+                if (bmi < 18.5) category = 'Underweight (Berat badan kurang) 💔';
+                else if (bmi < 25) category = 'Normal (Berat badan ideal) 💖';
+                else if (bmi < 30) category = 'Overweight (Berat badan berlebih) 🤗';
+                else category = 'Obese (Obesitas) 🌟';
+                document.getElementById('result').innerHTML = `BMI Anda: ${bmi} - ${category}`;
+            } else {
+                document.getElementById('result').innerHTML = 'Masukkan nilai yang valid! 😘';
+            }
+        }
+    </script>
+</body>
+</html>
